@@ -96,3 +96,13 @@ VALUES ("Flight Simulator", "O Flight Simulator promete aos jogadores a liberdad
 
 -- Lista todos os Produtos
 SELECT * FROM tb_produtos;
+
+SELECT * FROM tb_produtos INNER JOIN tb_categorias
+ON tb_categorias.id = tb_produtos.categoria_id;
+
+SELECT * FROM tb_produtos INNER JOIN tb_usuarios
+ON tb_usuarios.id = tb_produtos.usuario_id;
+
+SELECT * FROM tb_produtos 
+INNER JOIN tb_categorias ON tb_categorias.id = tb_produtos.categoria_id
+INNER JOIN tb_usuarios ON tb_usuarios.id = tb_produtos.usuario_id;
